@@ -1,0 +1,17 @@
+{
+"actividades":
+[{
+    "nombre":"Isla Samoa",
+    "foto":"./images/actividades-1.jpg",
+    "texto":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quot illum perspiciatis laboriosam est esse! Ratione voluptas et vero delectus error nobis saepe itaque, magman cum fuga nisi eligendi impedit hic."
+},
+{
+    "nombre":"Coco Bongo",
+    "foto":"./images/actividades-2.jpg",
+    "texto":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quot illum perspiciatis laboriosam est esse! Ratione voluptas et vero delectus error nobis saepe itaque, magman cum fuga nisi eligendi impedit hic."
+},
+{
+    "nombre":"Santo Domingo",
+    "foto":"./images/actividades-3.jpg",
+    "texto":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quot illum perspiciatis laboriosam est esse! Ratione voluptas et vero delectus error nobis saepe itaque, magman cum fuga nisi eligendi impedit hic."
+}]}

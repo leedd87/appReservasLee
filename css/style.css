@@ -1,0 +1,71 @@
+* {
+	font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2 {
+	color: #77e1ff !important;
+}
+
+section {
+	background-color: #051e32 !important;
+}
+
+button {
+	font-family: "Open Sans", sans-serif !important;
+	font-size: 20px !important;
+	background-color: #005383 !important;
+	color: #77e1ff !important;
+	width: 180px;
+	height: 75px;
+	border-radius: 10px !important;
+	border-style: none;
+}
+
+button:hover {
+	background-color: rgb(9, 65, 117) !important;
+}
+
+.card {
+	background-color: #77e1ff !important;
+	color: #005383 !important;
+}
+
+.card-title {
+	font-size: 25px !important;
+}
+
+.hotelPuntaCana {
+	display: none;
+}
+
+.hotelDominica {
+	display: none;
+}
+
+.hotelGrandBavaro {
+	display: none;
+}
+
+.mostrarHabitaciones {
+	display: none;
+}
+
+.mostrarServicios {
+	display: none;
+}
+
+p {
+	text-align: center;
+	font-size: 20px !important;
+}
+
+.seleccion {
+	font-size: 30px !important;
+	color: #77e1ff !important;
+}
+
+#sectionAjax img {
+	width: 200px;
+	height: 250px;
+}
