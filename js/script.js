@@ -30,8 +30,6 @@ $(() => {
     $('#btnCancel').click((e) => {
         location.reload();
     })
-
-
 });
 
 

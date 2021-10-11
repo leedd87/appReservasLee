@@ -1,4 +1,5 @@
 //FUNCIONES CREACION DE CARDS
+//FUNCION ACTIVIDAD CARD
 function actividadesCard() {
     $.get("./js/data.json", (data, status) => {
         if (status === "success") {
@@ -19,7 +20,7 @@ function actividadesCard() {
         }
     });
 }
-
+//FUNCION HOTELES CARD
 function hotelesCard() {
     $.get("./js/data.json", (data, status) => {
         if (status === "success") {
@@ -43,7 +44,7 @@ function hotelesCard() {
         }
     });
 }
-
+//FUNCION HABITACIONES CARD
 function habitacionesCard() {
     $.get("./js/data.json", (data, status) => {
         if (status === "success") {
@@ -67,7 +68,7 @@ function habitacionesCard() {
         }
     })
 }
-
+//FUNCION SERVICIOS CARD
 function serviciosCard() {
     $.get("./js/data.json", (data, status) => {
         if (status === "success") {
@@ -93,6 +94,7 @@ function serviciosCard() {
 }
 
 //SELECCION DE USUARIO--BTN--
+//SELECCION DE USUARIO HOTEL
 function seleccionHotel(listaHoteles) {
     listaHoteles.forEach((element) => {
         $(`#${element.id}`).click((e) => {
@@ -105,7 +107,7 @@ function seleccionHotel(listaHoteles) {
         });
     });
 };
-
+//SELECCION DE USUARIO HABITACION
 function seleccionHabitacion(listaHabitaciones) {
     listaHabitaciones.forEach((element) => {
         $(`#${element.id}`).click((e) => {
@@ -119,7 +121,7 @@ function seleccionHabitacion(listaHabitaciones) {
         })
     })
 }
-
+//SELECCION DE USUARIO SERVICIOS
 function seleccionServicios(listaServicios) {
     listaServicios.forEach((element) => {
         $(`#${element.id}`).click((e) => {
