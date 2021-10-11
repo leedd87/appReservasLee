@@ -1,46 +1,4 @@
-let precio = 0;
-
-
-
-
-//SELECCION HABITACION
-function seleccionSuite() {
-    $("#seleccionHabitacion").append(
-        `<p class='seleccion'>Elegiste habitacion Suite</p>`
-    );
-}
-
-function seleccionDoble() {
-    $("#seleccionHabitacion").append(
-        `<p class='seleccion'>Elegiste habitacion Doble</p>`
-    );
-}
-
-function seleccionTriple() {
-    $("#seleccionHabitacion").append(
-        `<p class='seleccion'>Elegiste habitacion Triple</p>`
-    );
-}
-
-//SELECCION SERVICIO
-function seleccionAllInclusive() {
-    $("#seleccionServicio").append(
-        `<p class='seleccion'>Elegiste el servicio de All Inclusive</p>`
-    );
-}
-
-function seleccionMediaPension() {
-    $("#seleccionServicio").append(
-        `<p class='seleccion'>Elegiste el servicio de Media Pension</p>`
-    );
-}
-
-function seleccionSoloDesayuno() {
-    $("#seleccionServicio").append(
-        `<p class='seleccion'>Elegiste el servicio de solo Desayuno</p>`
-    );
-}
-
+//FUNCIONES CREACION DE CARDS
 function actividadesCard() {
     $.get("./js/data.json", (data, status) => {
         if (status === "success") {
@@ -69,36 +27,22 @@ function hotelesCard() {
             for (let i = 0; i < data.hotel.length; i++) {
                 $("#mostrarHoteles").append(
                     `<div class="card text-center container align-items-center m-3 p-3 d-flex">
-                        <img src=${data.hotel[i].foto} class="card-img-top" alt="card-img-top">
-                        <div class="card-body">
-                        <h5 class="card-title">${data.hotel[i].nombre}</h5>
-                        <p class="card-text">${data.hotel[i].texto}</p>
-                        <button class="btn btn-primary deshotel" id="${data.hotel[i].id}">Pick Me</button>
-                        </div>
-                        </div>`
+                    <img src=${data.hotel[i].foto} class="card-img-top" alt="card-img-top">
+                    <div class="card-body">
+                    <h5 class="card-title">${data.hotel[i].nombre}</h5>
+                    <p class="card-text">${data.hotel[i].texto}</p>
+                    <button class="btn btn-primary deshotel" id="${data.hotel[i].id}">Pick Me</button>
+                    </div>
+                    </div>`
                 );
             }
             seleccionHotel(data.hotel);
+
         } else {
             alert("No se pudieron cargar los hoteles");
         }
     });
 }
-
-function seleccionHotel(listaHoteles) {
-    listaHoteles.forEach((element) => {
-        $(`#${element.id}`).click((e) => {
-            $("#seleccionHotel").append(
-                `<p class='seleccion'>Elegiste ${element.nombre}</p>`
-            );
-            $(".deshotel").prop("disabled", true);
-            habitacionesCard()
-        });
-    });
-};
-
-
-
 
 function habitacionesCard() {
     $.get("./js/data.json", (data, status) => {
@@ -124,20 +68,7 @@ function habitacionesCard() {
     })
 }
 
-function seleccionHabitacion(listaHabitaciones) {
-    listaHabitaciones.forEach((element) => {
-        $(`#${element.id}`).click((e) => {
-            $("#seleccionHabitacion").append(
-                `<p class='seleccion'>Elegiste ${element.nombre}</p>
-            <p class="seleccion">Precio de $<span id="precioHabitacion">${element.precio}</span>`
-            );
-            ServiciosCard()
-            $(".deshabitacion").prop("disabled", true);
-        })
-    })
-}
-
-function ServiciosCard() {
+function serviciosCard() {
     $.get("./js/data.json", (data, status) => {
         if (status === "success") {
             let setDatos = data;
@@ -161,6 +92,34 @@ function ServiciosCard() {
     });
 }
 
+//SELECCION DE USUARIO--BTN--
+function seleccionHotel(listaHoteles) {
+    listaHoteles.forEach((element) => {
+        $(`#${element.id}`).click((e) => {
+            $("#seleccionHotel").append(
+                `<p class='seleccion'>Elegiste ${element.nombre}</p>`
+            );
+            $(".deshotel").prop("disabled", true);
+            reserva.push(element.nombre)
+            habitacionesCard()
+        });
+    });
+};
+
+function seleccionHabitacion(listaHabitaciones) {
+    listaHabitaciones.forEach((element) => {
+        $(`#${element.id}`).click((e) => {
+            $("#seleccionHabitacion").append(
+                `<p class='seleccion'>Elegiste ${element.nombre}</p>
+            <p class="seleccion">Precio de $<span id="precioHabitacion">${element.precio}</span>`
+            );
+            $(".deshabitacion").prop("disabled", true);
+            reserva.push(element.nombre)
+            serviciosCard()
+        })
+    })
+}
+
 function seleccionServicios(listaServicios) {
     listaServicios.forEach((element) => {
         $(`#${element.id}`).click((e) => {
@@ -169,15 +128,36 @@ function seleccionServicios(listaServicios) {
             <p class="seleccion">Precio de $<span id="precioServicio">${element.precio}</span>`
             );
             $(".desservicios").prop("disabled", true);
-            calcularEstadia()
+            reserva.push(element.nombre)
+            mostrarCalcular()
         })
     })
 }
 
+//FUNCION TOTAL ESTADIA
 function calcularEstadia() {
+    let $precioHabitacion = document.querySelector('#precioHabitacion')
+    let $precioServicio = document.querySelector('#precioServicio')
+    let $numero = document.querySelector("#numero")
 
-    let precioHabitacion = document.querySelector('#precioHabitacion')
-    let precioServicio = document.querySelector('#precioServicio')
-    console.log(precioHabitacion);
-    console.log(precioServicio);
+    let precioHabitacion = Number($precioHabitacion.innerText)
+    let precioServicio = Number($precioServicio.innerText)
+    let numero = Number($numero.value)
+
+    let totalReserva = (precioHabitacion + precioServicio) * numero;
+
+    $("#cantidadDias").append(
+        `<p class='seleccion'>Total $${totalReserva}</p>`
+    );
+    reserva.push(totalReserva)
 }
+
+//MUESTRA LOS ELEMENTOS CALCULAR Y RESERVAR
+function mostrarCalcular() {
+    $('#sectionCalcular').removeClass('d-none');
+}
+function mostrarReservar() {
+    $('#btnReservar').removeClass('d-none');
+}
+
+

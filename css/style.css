@@ -35,26 +35,6 @@ button:hover {
 	font-size: 25px !important;
 }
 
-.hotelPuntaCana {
-	display: none;
-}
-
-.hotelDominica {
-	display: none;
-}
-
-.hotelGrandBavaro {
-	display: none;
-}
-
-.mostrarHabitaciones {
-	display: none;
-}
-
-.mostrarServicios {
-	display: none;
-}
-
 p {
 	text-align: center;
 	font-size: 20px !important;
@@ -63,26 +43,4 @@ p {
 .seleccion {
 	font-size: 30px !important;
 	color: #77e1ff !important;
-}
-
-#sectionAjax img {
-	width: 200px;
-	height: 250px;
-}
-
-#id3 {
-	background-color: black !important;
-}
-
-.mostrarHoteles {
-	font-size: 30px !important;
-	color: #77e1ff !important;
-}
-
-/* #habitacionSuite {
-	background-color: black !important;
-} */
-
-#hello {
-	background-color: black !important;
 }
