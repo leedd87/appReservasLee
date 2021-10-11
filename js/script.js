@@ -19,7 +19,7 @@ $(() => {
     });
 
     //BTN RESSERVAR Y CANCEL
-    $('#btnReservar').click((e) => {
+    $('#btnReservar').one("click", (e) => {
         alert('Gracias por tu reserva!')
         //SE GUARDA EN LOCALSTORAGE SI EL USUARIO HACE LA RESERVA
         localStorage.setItem('reserva', JSON.stringify(reserva));
