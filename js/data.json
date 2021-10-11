@@ -14,4 +14,73 @@
     "nombre":"Santo Domingo",
     "foto":"./images/actividades-3.jpg",
     "texto":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quot illum perspiciatis laboriosam est esse! Ratione voluptas et vero delectus error nobis saepe itaque, magman cum fuga nisi eligendi impedit hic."
-}]}
+}],
+
+"hotel":
+[{
+    "id": "id0",
+    "nombre":"Hotel Punta Cana",
+    "foto":"./images/img-2.jpg",
+    "texto": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod illum perspiciatis laboriosam est esse! Ratione voluptas et vero delectus error nobis saepe itaque, magnam cum fuga nisi eligendi impedit hic."
+},
+{
+    "id": "id1",
+    "nombre":"Hotel Dominica",
+    "foto":"./images/img-3.jpg",
+    "texto":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod illum perspiciatis laboriosam est esse! Ratione voluptas et vero delectus error nobis saepe itaque, magnam cum fuga nisi eligendi impedit hic."
+},
+{
+    "id": "id2",
+    "nombre":"Hotel Grand Bavaro",
+    "foto":"./images/img-4.jpg",
+    "texto":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod illum perspiciatis laboriosam est esse! Ratione voluptas et vero delectus error nobis saepe itaque, magnam cum fuga nisi eligendi impedit hic."
+}],
+
+"habitaciones":
+[{
+    "id":"habitacionSuite",
+    "nombre":"Habitacion Suite",
+    "foto":"./images/hab-1.jpg",
+    "texto":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod illum perspiciatis laboriosam est esse! Ratione voluptas et vero delectus error nobis saepe itaque, magnam cum fuga nisi eligendi impedit hic.",
+    "precio": 6000
+},
+{
+    "id":"habitacionDoble",
+    "nombre":"Habitacion Doble",
+    "foto":"./images/hab-2.jpg",
+    "texto":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod illum perspiciatis laboriosam est esse! Ratione voluptas et vero delectus error nobis saepe itaque, magnam cum fuga nisi eligendi impedit hic.",
+    "precio": 5000 
+},
+{
+    "id":"habitacionTriple",
+    "nombre":"Habitacion Triple",
+    "foto":"./images/hab-3.jpg",
+    "texto":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod illum perspiciatis laboriosam est esse! Ratione voluptas et vero delectus error nobis saepe itaque, magnam cum fuga nisi eligendi impedit hic.",
+    "precio": 4000 
+}],
+
+"servicios":
+[{
+    "id":"servicioAllInclusive",
+    "nombre":"All Inclusive",
+    "foto":"./images/all-inclusive.jpg",
+    "texto":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod illum perspiciatis laboriosam est esse! Ratione voluptas et vero delectus error nobis saepe itaque, magnam cum fuga nisi eligendi impedit hic.",
+    "precio": 5000
+},
+{
+    "id":"servicioMediaPension",
+    "nombre":"Media Pension",
+    "foto":"./images/media-pension.jpg",
+    "texto":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod illum perspiciatis laboriosam est esse! Ratione voluptas et vero delectus error nobis saepe itaque, magnam cum fuga nisi eligendi impedit hic.",
+    "precio": 4000
+},
+{
+    "id":"servicioDesayuno",
+    "nombre":"Solo Desayuno",
+    "foto":"./images/desayuno.jpg",
+    "texto":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod illum perspiciatis laboriosam est esse! Ratione voluptas et vero delectus error nobis saepe itaque, magnam cum fuga nisi eligendi impedit hic.",
+    "precio": 3000
+}
+]
+
+}
